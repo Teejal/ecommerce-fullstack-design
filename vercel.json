@@ -1,7 +1,9 @@
 {
+  "version": 2,
   "experimentalServices": {
     "frontend": {
-      "root": "frontend"
+      "root": "frontend",
+      "buildCommand": "npm run build"
     },
     "backend": {
       "root": "backend"
