@@ -205,7 +205,7 @@ const addToCart = (item) => {
 const removeFromCart = (idx) => {
   setCart(cart.filter((_, i) => i !== idx));
 };
-
+const [endpoint, setEndpoint] = useState('products');
 useEffect(() => {
   fetch(`/api/${endpoint}`)
     .then(res => res.json())
