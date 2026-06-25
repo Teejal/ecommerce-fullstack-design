@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 // Middleware to check if the incoming request is from an Admin
 const isAdmin = (req, res, next) => {
