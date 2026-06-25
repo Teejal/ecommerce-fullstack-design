@@ -103,7 +103,7 @@ export default function App() {
     const endpoint = isLoginView ? 'login' : 'signup';
     try {
       
-  const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`
+  const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`,{
         method: 'POST',
         mode: 'cors', 
         headers: { 
@@ -150,7 +150,7 @@ const handleAddProduct = async (e) => {
 console.log("Sending this data to backend:", productData);
 
   try {
-    const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`
+    const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -178,7 +178,7 @@ const handleDeleteProduct = async (id) => {
   if (!window.confirm("Are you sure you want to delete this product?")) return;
 
   try {
-    const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`
+    const response = await fetch(`https://ecommerce-fullstack-design-production-4750.up.railway.app/api/auth/${endpoint}`,{
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
