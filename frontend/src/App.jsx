@@ -103,7 +103,7 @@ export default function App() {
     const endpoint = isLoginView ? 'login' : 'signup';
     try {
       
-  const response = await fetch(`https://dv8ngt5j-5000.inc1.devtunnels.ms/api/auth/${endpoint}`, {
+  const response = await fetch(`https://ecommerce-fullstack-design-nn8l.vercel.app/${endpoint}`, {
         method: 'POST',
         mode: 'cors', 
         headers: { 
