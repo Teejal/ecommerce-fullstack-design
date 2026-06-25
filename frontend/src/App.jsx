@@ -207,11 +207,11 @@ const removeFromCart = (idx) => {
 };
 
 useEffect(() => {
-  fetch(`/api/${endpoint}`, {
+  fetch(`/api/${endpoint}`)
     .then(res => res.json())
     .then(data => setProducts(data))
     .catch(err => console.log(err));
-}, []);
+}, [endpoint]);
 
 const dynamicHomeOutdoor = products.filter(item => item.section === 'home_outdoor');
 const dynamicClothingTrends = products.filter(item => item.section === 'clothing_trends');
