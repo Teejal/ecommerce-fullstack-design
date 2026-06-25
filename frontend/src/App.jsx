@@ -103,7 +103,7 @@ export default function App() {
     const endpoint = isLoginView ? 'login' : 'signup';
     try {
       
-  const response = await fetch(`https://ecommerce-fullstack-design-nn8l.vercel.app/${endpoint}`, {
+  const response = await fetch(`/api/${endpoint}`, {
         method: 'POST',
         mode: 'cors', 
         headers: { 
@@ -150,7 +150,7 @@ const handleAddProduct = async (e) => {
 console.log("Sending this data to backend:", productData);
 
   try {
-    const response = await fetch('https://ecommerce-fullstack-design-nn8l.vercel.app/${endpoint}', {
+    const response = await fetch(`/api/${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -178,7 +178,7 @@ const handleDeleteProduct = async (id) => {
   if (!window.confirm("Are you sure you want to delete this product?")) return;
 
   try {
-    const response = await fetch(`https://ecommerce-fullstack-design-nn8l.vercel.app/${endpoint}`, {
+    const response = await fetch(`/api/${endpoint}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ const removeFromCart = (idx) => {
 };
 
 useEffect(() => {
-  fetch('https://ecommerce-fullstack-design-nn8l.vercel.app/${endpoint}')
+  fetch(`/api/${endpoint}`, {
     .then(res => res.json())
     .then(data => setProducts(data))
     .catch(err => console.log(err));
